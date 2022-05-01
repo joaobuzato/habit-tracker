@@ -1,5 +1,7 @@
 import requests
 import os
+from datetime import datetime
+
 USERNAME = "joaobuzato"
 TOKEN = os.environ.get("PIXELA_TOKEN")
 
@@ -30,6 +32,14 @@ cicle_params = {
     "date":"20220428",
     "quantity":"6.480"
 }
+today = datetime.now()
+format = today.strftime("%Y%m%d")
+print(format)
 
-response = requests.post(graph_endpoint+"/ciclying", json=cicle_params, headers=headers)
-print(response.text)
+# response = requests.post(graph_endpoint+"/ciclying", json=cicle_params, headers=headers)
+json_update = {
+    "quantity": "2.0"
+}
+# response = requests.put(graph_endpoint+"/ciclying/"+format, json=json_update, headers=headers)
+# print(response.text)
+
