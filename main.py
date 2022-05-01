@@ -41,5 +41,5 @@ json_update = {
     "quantity": "2.0"
 }
 # response = requests.put(graph_endpoint+"/ciclying/"+format, json=json_update, headers=headers)
-# print(response.text)
 
+# response = requests.delete(graph_endpoint+"/ciclying/"+format, headers=headers)
