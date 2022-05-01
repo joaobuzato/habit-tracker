@@ -26,5 +26,10 @@ headers = {
     "X-USER-TOKEN": TOKEN
 }
 
-response = requests.post(graph_endpoint, json=graph_config, headers=headers)
+cicle_params = {
+    "date":"20220428",
+    "quantity":"6.480"
+}
+
+response = requests.post(graph_endpoint+"/ciclying", json=cicle_params, headers=headers)
 print(response.text)
